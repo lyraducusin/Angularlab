@@ -1,4 +1,4 @@
-(function(){
+(function() {
   function FormController(){
     var vm = this;
     vm.list = [];

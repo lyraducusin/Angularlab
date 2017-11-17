@@ -1,0 +1,12 @@
+
+<div class="form" >
+  <input type="text" ng-model="itemFilter" placeholder="Filter your to-dos" class="filter">
+
+  <ol>
+    <li ng-repeat="item in $ctrl.list  | filter: itemFilter track by $index" list-directive>{{ item }} <i class="material-icons" ng-click="$ctrl.removeItems($index)">&#xE5CD;</i></li>
+  </ol>
+
+  <input type="text" ng-model="$ctrl.addItems" placeholder="Add your to do" class="add">
+
+  <button  ng-click="$ctrl.addList($ctrl.addItems)"button-directive>Add</button>
+</div>
